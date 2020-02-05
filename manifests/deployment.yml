@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: zholobovanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zholobovanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: zholobovanpipelinesjavascriptdocker 
+          image: mycontainerregistryitw.azurecr.io/zholobovanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
